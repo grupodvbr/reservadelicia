@@ -640,7 +640,7 @@
           </div>
         </div>
         <div class="meta"><b>Email:</b> ${r.email||'—'} • <b>Tel:</b> ${r.telefone||'—'}</div>
-        <div class="meta"><b>Cardápio:</b> ${r.cardapio||'—'} • <b>Banco:</b> ${r.banco||'—'}</div>
+        <div class="meta"><b>Comanda individual:</b> ${r.cardapio||'—'} • <b>Banco:</b> ${r.banco||'—'}</div>
         <div class="meta"><b>Obs:</b> ${r.observacoes||'—'}</div>
         <div class="meta">Estimado: ${formatBRL(parseBRL(r.valorEstimado||0))} • Adiantamento: ${formatBRL(parseBRL(r.pagamentoAntecipado||0) + sumExtrasFromRecord(r))} • Final pago: ${formatBRL(parseBRL(r.valorFinalPago||0))}</div>
         ${pagamentos? `<div class="meta">${pagamentos}</div>`:""}
