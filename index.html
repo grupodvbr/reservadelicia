@@ -284,44 +284,23 @@
         </div>
       </div>
 
-      <div class="section">
-        <h3>🪑 Detalhes da Reserva</h3>
-        <div class="inline-grid">
-          <div>
-            <label for="mesa">Local de preferência <span style="color:var(--danger)">*</span></label>
-            <select id="mesa" name="mesa" required>
-              <option value="">Selecione o local</option>
-              <option>SALA VIP</option>
-              <option>SALA VIP 2</option>
-              <option>SACADA</option>
-              <option>SALÃO CENTRAL</option>
-            </select>
-          </div>
-          <div>
-            <label for="cardapio">Cardápio</label>
-            <select id="cardapio" name="cardapio">
-              <option value="">Selecione</option>
-              <option>Buffet Ouro</option>
-              <option>Buffet Diamante</option>
-              <option>Buffet Master Gold</option>
-              <option>Rodízio Pizza</option>
-              <option>Rodízio Happy Hour</option>
-              <option>À la carte</option>
-              <option>Cardápio Verde</option>
-              <option>Cardápio Azul</option>
-              <option>Cardápio Vermelho</option>
-              <option>Cardápio Rubi</option>
-              <option>Cardápio Diamente</option>
-              <option>Cardápio safira</option>
-              <option>Outro</option>
-            </select>
-          </div>
-        </div>
+<div class="section">
+  <h3>🪑 Detalhes da Reserva</h3>
+  <div class="inline-grid">
+    <div>
+      <label for="mesa">Local de preferência <span style="color:var(--danger)">*</span></label>
+      <input id="mesa" name="mesa" type="text" placeholder="Digite o local desejado" required />
+    </div>
+    <div>
+      <label for="cardapio">Cardápio</label>
+      <input id="cardapio" name="cardapio" type="text" placeholder="Digite o tipo de cardápio ou menu" />
+    </div>
+  </div>
 
-        <label for="datahora">Data e Hora da Reserva <span style="color:var(--danger)">*</span></label>
-        <input type="datetime-local" id="datahora" name="datahora" required />
-        <div class="hint">Não é permitido escolher data passada.</div>
-      </div>
+  <label for="datahora">Data e Hora da Reserva <span style="color:var(--danger)">*</span></label>
+  <input type="datetime-local" id="datahora" name="datahora" required />
+  <div class="hint">Não é permitido escolher data passada.</div>
+</div>
 
       <div class="section">
         <h3>💳 Pagamento / Sinal</h3>
