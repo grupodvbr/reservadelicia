@@ -284,23 +284,27 @@
         </div>
       </div>
 
-<div class="section">
+ <div class="section">
   <h3>🪑 Detalhes da Reserva</h3>
   <div class="inline-grid">
     <div>
       <label for="mesa">Local de preferência <span style="color:var(--danger)">*</span></label>
       <input id="mesa" name="mesa" type="text" placeholder="Digite o local desejado" required />
     </div>
-    <div>
-      <label for="cardapio">Cardápio</label>
-      <input id="cardapio" name="cardapio" type="text" placeholder="Digite o tipo de cardápio ou menu" />
-    </div>
-  </div>
+          <div>
+            <label for="cardapio">Comanda individual?</label>
+            <select id="cardapio" name="cardapio">
+              <option value="">Selecione</option>
+              <option>Sim</option>
+              <option>Não</option>
+            </select>
+          </div>
+        </div>
 
-  <label for="datahora">Data e Hora da Reserva <span style="color:var(--danger)">*</span></label>
-  <input type="datetime-local" id="datahora" name="datahora" required />
-  <div class="hint">Não é permitido escolher data passada.</div>
-</div>
+        <label for="datahora">Data e Hora da Reserva <span style="color:var(--danger)">*</span></label>
+        <input type="datetime-local" id="datahora" name="datahora" required />
+        <div class="hint">Não é permitido escolher data passada.</div>
+      </div>
 
       <div class="section">
         <h3>💳 Pagamento / Sinal</h3>
