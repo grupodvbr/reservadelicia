@@ -143,10 +143,37 @@
     width: 100% !important;
   }
 }
+/* ====== Botão de tema ====== */
+.theme-toggle {
+  position: fixed;
+  top: 12px;
+  right: 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  z-index: 100;
+  transition: 0.2s;
+}
+.theme-toggle:hover {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* Tema escuro manual */
+.dark-mode {
+  --bg:#0b0e14; --card:#0f131b; --text:#e5e7eb; --muted:#9ca3af; --line:#1f2937;
+  --shadow: 0 12px 30px rgba(0,0,0,.35); --glass: rgba(17,24,39,.5);
+}
 
   </style>
 </head>
 <body>
+  <button id="themeToggle" class="theme-toggle">🌙 Tema Escuro</button>
   <div class="wrap">
     <header>
       <div class="title">Reservas • Delícia Gourmet</div>
@@ -912,6 +939,24 @@ state.reservas = data.map((r,i)=> {
       $('#datahora').min = nowLocalMin();
       refreshAll();
     });
+
+    /* ==============================
+   Alternância de tema
+============================== */
+const btnTheme = document.getElementById("themeToggle");
+const savedTheme = localStorage.getItem("theme") || "light";
+
+if (savedTheme === "dark") {
+  document.body.classList.add("dark-mode");
+  btnTheme.textContent = "☀️ Tema Claro";
+}
+
+btnTheme.addEventListener("click", () => {
+  const isDark = document.body.classList.toggle("dark-mode");
+  btnTheme.textContent = isDark ? "☀️ Tema Claro" : "🌙 Tema Escuro";
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
   </script>
 </body>
 </html>
